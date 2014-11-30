@@ -6,6 +6,7 @@ html, body {
     margin: 30px 0;
 }
 
+<<<<<<< HEAD
 .navbar-header{
 	margin: 0 0 0 5%;
 }
@@ -15,3 +16,19 @@ html, body {
 		display: none;
 	}
 }
+=======
+.navbar-header {
+	margin: 0 0 0 5%;
+}
+
+.nav-right{
+	float: right;
+	padding: 1em;
+}
+
+@media screen and (max-width: 40em){
+	.sidebar-nav {
+		display:none;
+	}
+}
+>>>>>>> master

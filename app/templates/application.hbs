@@ -7,7 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+<<<<<<< HEAD
             <a class="navbar-brand" href="#">Unleashed</a>
+=======
+            {{#link-to "index" classNames="navbar-brand"}}Unleashed{{/link-to}}
+            {{#link-to "parks" classNames="nav-right"}}Parks{{/link-to}}
+>>>>>>> master
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
         </div>
@@ -17,10 +22,17 @@
             <div>
                 <div class="col-md-3">
                     <div class="well sidebar-nav">
+<<<<<<< HEAD
                         <strong>List of Parks</strong>
                         <ul class="list-group">
                         {{#each title in model}}
                             <li class="list-group-item">{{title}}</li>
+=======
+                        <strong>Colors</strong>
+                        <ul class="list-group">
+                        {{#each item in controller}}
+                            <li class="list-group-item">{{item}}</li>
+>>>>>>> master
                         {{/each}}
                         </ul>
                     </div>
