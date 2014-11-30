@@ -1,0 +1,1 @@
+Unleashed.ApplicationAdapter = DS.FixtureAdapter;
