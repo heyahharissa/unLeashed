@@ -1,0 +1,20 @@
+<h1>Park</h1>
+
+<table>
+    <tbody>
+    {{#each model.attributes}}
+    <tr>
+      <td>
+        <strong>{{this.key}}:</strong>
+      </td>
+      <td>
+        {{this.value}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{#link-to 'park.edit' model}}Change{{/link-to}}
+
+{{outlet}}
