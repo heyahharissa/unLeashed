@@ -1,5 +1,7 @@
 var Unleashed = window.Unleashed = Ember.Application.create();
 
+Unleashed.ApplicationAdapter = DS.FixtureAdapter.extend();
+
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/store');
