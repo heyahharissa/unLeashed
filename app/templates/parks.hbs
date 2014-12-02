@@ -1,9 +1,13 @@
-<h1>Parks</h1>
-
-<ul>
- {{#each model}}
- <li>{{#link-to 'park' this}}{{this.name}}{{/link-to}}</li>
-  {{/each}}
-</ul>
-
+<div class="parks">
+<h1>Parks ({{parksCount}})</h1>
+	<ul>
+	 {{#each model}}
+	 	<li>{{#link-to 'park' this}}{{this.name}}{{/link-to}}</li>
+	 		{{this.location}}
+	 		{{this.description}}
+	 		{{this.rating}}
+	 		<hr>
+	 {{/each}}
+	</ul>
+</div>	
 {{outlet}}

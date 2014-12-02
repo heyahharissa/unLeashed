@@ -1,4 +1,6 @@
 Unleashed.ParksController = Ember.ObjectController.extend({
-  // Implement your controller here.
+    parksCount: function(){
+    return this.get('model.length');
+  }.property('@each')
 });
 

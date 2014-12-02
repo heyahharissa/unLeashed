@@ -4,7 +4,6 @@ Unleashed.Router.map(function () {
     this.resource('park', { path: '/:park_id' }, function(){
       this.route('edit');
     });
-    this.route('create');
   });
-  
+  this.route('new');
 });

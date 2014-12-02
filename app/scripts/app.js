@@ -1,6 +1,6 @@
 var Unleashed = window.Unleashed = Ember.Application.create();
 
-Unleashed.ApplicationAdapter = DS.FixtureAdapter.extend();
+Ember.FEATURES['ember-routing-drop-deprecated-action-style'] = true 
 
 /* Order and include as you please. */
 require('scripts/controllers/*');

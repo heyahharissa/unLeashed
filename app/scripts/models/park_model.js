@@ -19,33 +19,3 @@ Unleashed.Park.reopen({
   }.property()
 });
 
-// delete below here if you do not want fixtures
-Unleashed.Park.FIXTURES = [
-  
-  {
-    id: 0,
-    
-    name: 'foo',
-    
-    location: 'foo',
-    
-    description: 'foo',
-    
-    rating: 'foo'
-    
-  },
-  
-  {
-    id: 1,
-    
-    name: 'foo',
-    
-    location: 'foo',
-    
-    description: 'foo',
-    
-    rating: 'foo'
-    
-  }
-  
-];

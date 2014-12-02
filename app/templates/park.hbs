@@ -1,11 +1,12 @@
-<h1>Park</h1>
+<div class="park">
+<h1>{{name}}</h1>
 
 <table>
     <tbody>
     {{#each model.attributes}}
     <tr>
       <td>
-        <strong>{{this.key}}:</strong>
+        <strong>{{this.key}}:</strong> 
       </td>
       <td>
         {{this.value}}
@@ -16,5 +17,13 @@
 </table>
 
 {{#link-to 'park.edit' model}}Change{{/link-to}}
-
+<button {{action "delete"}}>Delete</button>
+{{#if deleteMode}}
+  <div class="confirm-box">
+    <h4>Really?</h4>
+    <button {{action "confirmDelete"}}> yes </button>
+    <button {{action "cancelDelete"}}> no </button>
+  </div>
+  {{/if}}
+</div>
 {{outlet}}
