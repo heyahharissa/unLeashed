@@ -1,10 +1,14 @@
-<div class="new">
-	<h1>Add a New Park</h1>
-	<form {{action 'create' on='submit'}}>
+<div class="panel panel-default new">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add a New Park</h3>
+  </div>
+  <div class="panel-body">
+    <form {{action 'create' on='submit'}}>
 	    <h1>{{name}}</h1>
 	      <p>Name: {{input value=name}}</p>
 	      <p>Picture: {{input type='text' value=imgUrl id='imgUrl' }}</p>
 	      <p>Description: {{input value=description}}</p>
 	    <button>Create</button>
 	</form>
+  </div>
 </div>

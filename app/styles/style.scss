@@ -2,8 +2,7 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
 /* Put your CSS here */
-
-html, body {
+body {
 	background: url('http://www.nolibsvet.com/wp-content/uploads/2014/03/dog-park.jpg') no-repeat center center fixed;
 	 -webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -54,18 +53,38 @@ h1 {
 }
 
 .parks {
+	color: white;
+	background-color: #777;
 	display: inline-block;
 	float: left;
 	padding: 1em;
 	width: 25%;
+	h1 {
+		color: white;
+	}
 	ul {
 		padding: 0;
 		margin: 0;
 	}
 	li {
 		list-style-type: none;
+		font-size: 1.5em;
+	}
+	a {
+		color: white;
 	}
 
+}
+
+hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #848484;
+}
+
+.inner-park {
+	padding: 1em;
 }
 
 .new {

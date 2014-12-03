@@ -1,20 +1,22 @@
 <div class="park">
 <h1>{{name}}</h1>
 
-<table>
-    <tbody>
-    {{#each model.attributes}}
-    <tr>
-      <td>
-        <strong>{{this.key}}:</strong> 
-      </td>
-      <td>
-        {{this.value}}
-      </td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+<div class="inner-park">
+  <table>
+      <tbody>
+      {{#each model.attributes}}
+      <tr>
+        <td>
+          <strong>{{this.key}}:</strong> 
+        </td>
+        <td>
+          {{this.value}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 
 {{#link-to 'park.edit' model}}Change{{/link-to}}
 <button {{action "delete"}}>Delete</button>
