@@ -1,22 +1,22 @@
 <div class="park">
-  <h1>Park</h1>
-
-<table>
-  <tbody>
-    {{#each buffer}}
-    <tr>
-      <td>
-        <strong>{{key}}:</strong>
-      </td>
-      <td>
-        {{input value=value}}
-      </td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
-
-<button {{action 'save'}}>Update</button>
+  <h1>{{name}}</h1>
+    <div class="inner-park">
+      <table>
+        <tbody>
+          {{#each buffer}}
+          <tr>
+            <td>
+              <strong>{{key}}:</strong>
+            </td>
+            <td>
+              {{input value=value}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  <button {{action 'save'}}>Update</button>
 
 {{outlet}}
 
