@@ -57,7 +57,9 @@ span {
 	display:inline-block;
 	float: left;
 	padding: 1em;
-	width: 75%;
+	li {
+		list-style-type: none;
+	}
 
 }
 
@@ -93,7 +95,11 @@ hr {
 }
 
 .inner-park {
-	padding: 1em;
+	padding: 1em 0;
+	ul {
+		margin: 0 auto;
+		padding: 0;
+	}
 }
 
 .new {

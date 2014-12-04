@@ -1,23 +1,15 @@
 <div class="park">
   <h1>{{name}}</h1>
     <div class="inner-park">
-      <table>
-        <tbody>
-          {{#each buffer}}
-          <tr>
-            <td>
-              <strong>{{key}}:</strong>
-            </td>
-            <td>
-              {{input value=value}}
-            </td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
+      <form {{action 'editPark'  on='submit'}}>
+          <p>Name: {{input value=name}}</p>
+          <p>Picture: {{input type='text' value=imgUrl id='imgUrl' }}</p>
+          <p>Description: {{input value=description}}</p>
+          <p>Location: <button {{action "location"}}> Set Location</button></p>
+        <button>Update</button>
+      </form>
     </div>
-  <button {{action 'save'}}>Update</button>
-
+ 
 {{outlet}}
 
 </div>
