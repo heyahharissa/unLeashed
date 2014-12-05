@@ -5,5 +5,8 @@
         <button class="btn btn-default" type="button" >Go!</button>
       </span>
     </div><!-- /input-group -->
+    {{#if latitude}}
+    {{google-maps latitude=latitude longitude=longitude}}
+    {{/if}}
 </main>
 

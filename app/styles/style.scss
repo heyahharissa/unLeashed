@@ -10,6 +10,11 @@ body {
   	background-size: cover;
 }
 
+.map-canvas {
+  width: 800px;
+  height: 600px;
+}
+
 h1 {
 	padding: 0;
 	margin: 0;
@@ -99,6 +104,11 @@ hr {
 	ul {
 		margin: 0 auto;
 		padding: 0;
+	}
+
+	img {
+		height: auto;
+		max-width: 100%;
 	}
 }
 

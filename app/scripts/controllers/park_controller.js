@@ -1,14 +1,6 @@
 Unleashed.ParkController = Ember.ObjectController.extend({
   deleteMode: false,
 
-  userLocation: null,
-
-  coords: function () {
-    if (this.get('userLocation')) {
-      return '(' + this.get('userLocation').coords.latitude + ', ' + this.get('userLocation').coords.longitude + ')';
-    }
-  }.property('userLocation'),
-
   actions: {
     delete: function(){
       // our delete method now only toggles deleteMode's value
@@ -31,14 +23,6 @@ Unleashed.ParkController = Ember.ObjectController.extend({
     edit: function(){
       this.transitionToRoute('park.edit');
     },
-
-    location: function(){
-      var that   = this;
-      var getGeo = navigator.geolocation.getCurrentPosition(function(e){
-        console.log(e);
-        that.set('userLocation', e);
-      });
-    }
   }
 });
 

@@ -1,4 +1,5 @@
 Unleashed.NewController = Ember.Controller.extend({	
+	
 	actions: {
 	    create : function(){
 	      var parkAttrs = this.getProperties('name', 'imgUrl','description','location','rating');
@@ -7,5 +8,5 @@ Unleashed.NewController = Ember.Controller.extend({
 	      this.transitionToRoute('index');
 	    }
   	}
- 
+
  });
