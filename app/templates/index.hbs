@@ -1,10 +1,4 @@
 <main>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search by Zipcode">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" >Go!</button>
-      </span>
-    </div><!-- /input-group -->
     {{#if latitude}}
     {{google-maps latitude=latitude longitude=longitude}}
     {{/if}}
