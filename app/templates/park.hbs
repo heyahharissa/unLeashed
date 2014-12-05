@@ -17,5 +17,13 @@
     <button {{action "cancelDelete"}}> no </button>
   </div>
   {{/if}}
+  {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
+  <h2>Comments ({{comments.length}})</h2>
+    {{#each comments}}
+      <p>{{commenter}}</p>
+      <p>{{text}}</p>
+    {{/each}}
 </div>
+
+
 {{outlet}}

@@ -8,7 +8,9 @@ Unleashed.Park = DS.Model.extend({
 
     description: DS.attr('string'),
 
-    rating: DS.attr('number')
+    rating: DS.attr('number'),
+    
+    comments: DS.hasMany('comment', { async: true})
 });
 
 // probably should be mixed-in...

@@ -8,12 +8,23 @@ Unleashed.GoogleMapsComponent = Ember.Component.extend({
       		mapTypeId: google.maps.MapTypeId.ROADMAP
     	};
 
-    	new google.maps.Map(container[0], options);
+    	var map = new google.maps.Map(container[0], options);
+    	this.set('map', map);
+    	this.generatePin();
   	}.on('didInsertElement'),
-  
-    coordinatesChanged: function() {
-	    var map = this.get('map');
 
-	    if (map) map.setCenter(new google.maps.LatLng(this.get('latitude'), this.get('longitude')));
-    }.observes('latitude', 'longitude'),
+    onMarkerChange: function() {
+    	this.generatePin();
+    }.observes('markers'),
+
+    generatePin: function() {
+    	var marker = this.get('markers')[0];
+    	var map = this.get('map');
+    	var coords = new google.maps.LatLng(marker.get('latitude'), marker.get('longitude'));
+    	var marker = new google.maps.Marker({
+    		position: coords,
+    		map: map
+    	});
+    }
+
 });
