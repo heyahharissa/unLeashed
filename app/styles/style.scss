@@ -123,7 +123,15 @@ hr {
 
 .comment {
 	border: 1px solid black;
+	margin-bottom: .25em;
 	padding: 1em;
+}
+
+.new_comment {
+	background-color: rgba(255,255,255,.9);
+	padding: 1em;
+	position: absolute;
+	top: 3em;
 }
 
 @media screen and (max-width: 40em){

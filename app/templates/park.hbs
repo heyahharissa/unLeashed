@@ -21,9 +21,7 @@
   <h2>Comments ({{comments.length}})</h2>
     {{#each comments}}
       <div class="comment">
-        <p>{{commenter}}</p>
-        <p>Says:</p>
-        <p>{{text}}</p>
+        <p>{{commenter}} Says: {{text}}</p>
         <button {{action "delete"}}>Delete</button>
       </div>
     {{/each}}
