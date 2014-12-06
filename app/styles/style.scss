@@ -117,6 +117,15 @@ hr {
 	padding: 1em;
 }
 
+.locator {
+	display: none;
+}
+
+.comment {
+	border: 1px solid black;
+	padding: 1em;
+}
+
 @media screen and (max-width: 40em){
 
 	.input-group {

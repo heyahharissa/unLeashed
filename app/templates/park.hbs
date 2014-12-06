@@ -20,8 +20,12 @@
   {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
   <h2>Comments ({{comments.length}})</h2>
     {{#each comments}}
-      <p>{{commenter}}</p>
-      <p>{{text}}</p>
+      <div class="comment">
+        <p>{{commenter}}</p>
+        <p>Says:</p>
+        <p>{{text}}</p>
+        <button {{action "delete"}}>Delete</button>
+      </div>
     {{/each}}
 </div>
 
