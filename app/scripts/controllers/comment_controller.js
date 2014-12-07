@@ -16,6 +16,7 @@ Unleashed.ParkNewCommentController = Ember.Controller.extend({
             	park.get('comments').pushObject(comment);
             	park.save();
 
+            	this.transitionToRoute('park');
 	        }    
 	    }        
 });       

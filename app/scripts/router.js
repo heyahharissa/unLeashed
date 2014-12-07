@@ -7,4 +7,9 @@ Unleashed.Router.map(function () {
     });
   });
   this.route('new');
+  this.resource('users', function() {
+  	  this.resource('user', {path: '/:user_id'}, function(){
+
+  	  });
+  });
 });
