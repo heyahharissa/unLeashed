@@ -140,6 +140,15 @@ hr {
 	width: 80%;
 }
 
+.users {
+	background-color: #ffffff;
+	border-radius: 6px;
+	padding: 1em;
+	h1{
+		padding: 0 1em;
+	}
+}
+
 @media screen and (max-width: 40em){
 	
 	.new_comment_container {

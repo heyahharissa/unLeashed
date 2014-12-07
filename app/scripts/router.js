@@ -8,8 +8,9 @@ Unleashed.Router.map(function () {
   });
   this.route('new');
   this.resource('users', function() {
-  	  this.resource('user', {path: '/:user_id'}, function(){
-
+  	  this.resource('user', {path: '/:userName'}, function(){
+  	  	this.route('edit_user');
+  	  	this.route('new_user');
   	  });
   });
 });

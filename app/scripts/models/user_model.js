@@ -1,5 +1,7 @@
 /*global Ember*/
-Unleashed.User = DS.Model.extend({});
+Unleashed.User = DS.Model.extend({
+  userName: DS.attr('string')
+});
 
 // probably should be mixed-in...
 Unleashed.User.reopen({
