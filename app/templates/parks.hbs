@@ -6,16 +6,10 @@
 	 	<li>{{#link-to 'park' this}}{{this.name}}{{/link-to}}</li>
 	 		{{this.location}}
 	 		{{this.description}}
-	 		{{this.rating}}
 	 		<hr>
 	 {{/each}}
 	</ul>
+	{{#link-to "parks.new"}}<span class="glyphicon glyphicon-plus"></span>New{{/link-to}}
 </div>	
 {{outlet}}
 
-<!-- <div class="list-group">
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">...</p>
-  </a>
-</div> -->

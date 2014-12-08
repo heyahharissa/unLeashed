@@ -9,7 +9,7 @@
 </div>
 
 {{#link-to 'park.edit' model}}Change{{/link-to}}
-<button {{action "delete"}}>Delete</button>
+<button {{action "delete"}} class="btn btn-danger">Delete</button>
 {{#if deleteMode}}
   <div class="confirm-box">
     <h4>Really?</h4>
@@ -18,13 +18,18 @@
   </div>
   {{/if}}
   {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
+  <div class="comment-box">
   <h2>Comments ({{comments.length}})</h2>
     {{#each comments}}
       <div class="comment">
-        <p>{{commenter}} Says: {{text}}</p>
-        <button {{action "delete"}}>Delete</button>
+        <img {{bind-attr src=userImgUrl}} /> 
+        <p>{{commenter}}</p>
+        <p>said:</p>  
+        <p>{{text}}</p>
+        <button {{action "deleteComment"}}  class="btn btn-danger">Delete</button>
       </div>
     {{/each}}
+  </div>  
 </div>
 
 

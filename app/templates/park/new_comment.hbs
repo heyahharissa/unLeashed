@@ -1,8 +1,8 @@
 <div class="new_comment_container">
   <div class="new_comment">
-    <h4>New Comment</h4>
+     <h4>New Comment</h4>
         <div class='preview'>
-          {{commenter}} - {{text}}
+          {{commenter}}  {{text}}
         </div>
         <form>
           <div class='form-group'>
@@ -13,7 +13,7 @@
             <label for='text'>Comment:</label>
             {{textarea value=text id='text' class='form-control' rows='5'}}
           </div>
-          <button class='btn btn-primary' {{action 'save'}}>Add Comment</button>
+          <button class='btn btn-primary' {{action 'saveComment'}}>Add Comment</button>
         </form>
   </div>    
 </div>  

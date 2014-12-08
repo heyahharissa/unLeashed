@@ -13,18 +13,3 @@ Unleashed.User.reopen({
   }.property()
 });
 
-// delete below here if you do not want fixtures
-Unleashed.User.FIXTURES = [
-  
-  {
-    id: 0,
-    userName: 'alyssa'
-    
-  },
-  
-  {
-    id: 1,
-    userName:'Ryan'
-  }
-  
-];

@@ -33,6 +33,11 @@ span {
 	padding: .25em;
 }
 
+.navbar-default {
+	background-color: #fafafa;
+	border: none;
+}
+
 .navbar-header{
 	display: inline-block;
 	margin: 0 0 0 5%;
@@ -48,7 +53,7 @@ span {
 }
 
 .parks, .new {
-	background-color: rgba(255,255,255,.95);
+	background-color: #E0E0E0;
 	-webkit-border-top-left-radius: 6px;
 	-webkit-border-bottom-left-radius: 6px;
 	-moz-border-radius-topleft: 6px;
@@ -58,10 +63,18 @@ span {
 }
 
 .park {
-	background-color: rgba(255,255,255,.95);
+	background-color: #394F66;
+	//background-color: rgba(255,255,255,.95);
+	color: white;
 	display:inline-block;
 	float: left;
 	padding: 1em;
+	-webkit-border-radius: 6px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius: 6px;
+	-moz-border-radius-topleft: 0;
+	border-radius: 6px;
+	border-top-left-radius: 0;
 	li {
 		list-style-type: none;
 	}
@@ -122,7 +135,10 @@ hr {
 }
 
 .comment {
+	background-color: rgba(255,255,255,.95);
 	border: 1px solid black;
+	border-radius: 6px;
+	color: #555;
 	margin-bottom: .25em;
 	padding: 1em;
 }
@@ -135,9 +151,8 @@ hr {
 .new_comment_container {
 	background-color: black;
 	height: auto;
-	position: absolute;
-	top: 3em;
-	width: 80%;
+	float: left;
+	width: 25%;
 }
 
 .users {
@@ -147,6 +162,12 @@ hr {
 	h1{
 		padding: 0 1em;
 	}
+}
+
+.testing {
+	background-color: #E0E0E0;
+	border-radius: 6px;
+	padding: 1em;
 }
 
 @media screen and (max-width: 40em){
