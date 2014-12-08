@@ -1,5 +1,6 @@
-<h1>user</h1>
-
-{{#link-to 'user.edit' model}}Change{{/link-to}}
-
+<div class="testing">
+	<h1>{{userName}}</h1>
+		<img {{bind-attr src=userImgUrl}} class="user-page"/>
+		{{#link-to 'user.edit_user' model}}Change{{/link-to}}
+</div>
 {{outlet}}

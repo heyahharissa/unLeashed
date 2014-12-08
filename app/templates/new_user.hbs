@@ -1,0 +1,8 @@
+<div class="new-user">
+	    <h2>Become a User</h2>
+	    <form {{action 'createUser' on='submit'}}>
+		      <p>Name: {{input value=userName id="userName"}}</p>
+		      <p>Profile Picture: {{input type="text" value=userImgUrl id="userImgUrl"}}</p>
+		    <button class="btn">Create</button>
+		</form>
+</div>

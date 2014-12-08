@@ -125,9 +125,23 @@ hr {
 	}
 }
 
-.new {
+.new-park {
+	background-color: #E0E0E0;
+	border-radius: 6px;
+	float: left;
+	padding: 1em;
+	h1 {
+		padding: 1em 0;
+	}
+}
+
+.new-user {
+	background-color: #E0E0E0;
 	border-radius: 6px;
 	padding: 1em;
+	h1 {
+		padding: 1em 0;
+	}
 }
 
 .locator {
@@ -158,18 +172,94 @@ hr {
 .users {
 	background-color: #ffffff;
 	border-radius: 6px;
+	color: #333;
 	padding: 1em;
 	h1{
 		padding: 0 1em;
 	}
 }
 
+img.user-page {
+	max-height: 250px;
+	max-width: 300px;
+}
+
 .testing {
 	background-color: #E0E0E0;
 	border-radius: 6px;
 	padding: 1em;
+	h1 {
+		padding: 1em;
+	}
+	h3 {
+		margin: 0;
+		padding: .5em;
+	}
 }
 
+.preview-avatar {
+	border: 5px solid white;
+	display: none;
+	height: auto;
+	width: 200px;
+}
+//stars 
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:3em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+//end stars
 @media screen and (max-width: 40em){
 	
 	.new_comment_container {

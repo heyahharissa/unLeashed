@@ -2,23 +2,13 @@
 	<h1>users</h1>
 	
 	<ul>
-	 {{#each model}}
-	 <li>{{#link-to 'user' this}}{{this.userName}}{{/link-to}}</li>
+	 {{#each}}
+	 <li>{{#link-to 'user' this}}
+	 	{{userName}}
+	 {{/link-to}}</li>
 	  {{/each}}
 	</ul>
+
 </div>
 
-<div class="panel panel-default new">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">Become a User</h3>
-	  </div>
-	  <div class="panel-body">
-	    <form {{action 'createUser' on='submit'}}>
-		    <h1>{{userName}}</h1>
-		      <p>Name: {{input value=userName}}</p>
-		      <p>Avatar: {{input type="text" value=userImgUrl }}</p>
-		    <button>Create</button>
-		</form>
-	  </div>
-	</div>
 {{outlet}}

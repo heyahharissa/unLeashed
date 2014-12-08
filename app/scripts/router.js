@@ -5,11 +5,11 @@ Unleashed.Router.map(function () {
       this.route('edit');
       this.route('new_comment');
     });
-      this.route('new');
+      this.route('new_park');
   });
-  this.resource('users', function(){
-  	this.resource('user', { path: '/:userName'}, function(){
-
-  	});
+  this.resource('users');
+  this.resource('user', { path: '/:id'}, function(){
+    this.route('edit_user');
   });
+  this.route('new_user');
 });

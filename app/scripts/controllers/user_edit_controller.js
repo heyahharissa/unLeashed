@@ -1,5 +1,5 @@
 Unleashed.UserEditController = Ember.ObjectController.extend({
-  needs: 'user',
+  needs: ['user'],
   actions: {
     save: function(){
       self = this

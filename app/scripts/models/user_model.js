@@ -1,6 +1,7 @@
 /*global Ember*/
 Unleashed.User = DS.Model.extend({
-  userName: DS.attr('string')
+  userName: DS.attr('string'),
+  userImgUrl: DS.attr('string')
 });
 
 // probably should be mixed-in...
