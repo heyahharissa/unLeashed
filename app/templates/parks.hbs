@@ -2,13 +2,19 @@
 <h1>Parks ({{parksCount}})</h1>
 		<hr>
 	<ul>
-	 {{#each model}}
-	 	<li>{{#link-to 'park' this}}{{this.name}}{{/link-to}}</li>
-	 		{{this.description}}
+	 {{#each}}
+	 	<li>
+	 		{{#link-to 'park' this}}
+	 			{{this.name}}
+	 		{{/link-to}}
+		 	{{this.description}}
 	 		<hr>
+ 		</li>
 	 {{/each}}
 	</ul>
 	<button class="btn new-class">{{#link-to "parks.new_park"}}<span class="glyphicon glyphicon-plus"></span>New{{/link-to}}</button>
 </div>	
+
+
 {{outlet}}
 

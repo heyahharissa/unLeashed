@@ -2,8 +2,8 @@ Unleashed.ParkController = Ember.ObjectController.extend({
   deleteMode: false,
 
   stars: function () {
-     if (this.get('rating') == 0 || null || undefined){
-      return ['This park has not been rated'];
+    if (this.get('rating') == 0 || null || undefined){
+      return [];//['This park has not been rated'];
     } else if(this.get('rating') == 1) {
       return [1];
     } else if(this.get('rating') == 2){
@@ -15,7 +15,7 @@ Unleashed.ParkController = Ember.ObjectController.extend({
     }  else if(this.get('rating') == 5){
       return[1,2,3,4,5];
     } else {
-      return ["no rating"];
+      return []//no rating;
     }
   }.property('rating'),
 
@@ -42,8 +42,8 @@ Unleashed.ParkController = Ember.ObjectController.extend({
       this.transitionToRoute('park.edit');
     },
     deleteComment: function(){
-       this.get('model').deleteRecord();
-       this.get('model').save();
+       this.get('model.comment').deleteRecord();
+       this.get('model.comment').save();
        this.transitionToRoute('parks');
     }
   }

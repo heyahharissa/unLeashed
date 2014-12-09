@@ -23,7 +23,7 @@ Unleashed.GoogleMapsComponent = Ember.Component.extend({
         markers.forEach(function (marker) {
             var coords = new google.maps.LatLng(marker.get('latitude'), marker.get('longitude'));
             var contentString = '<div id="content">'+
-              '<h3>' + marker.get('name') + '</h3>'+
+              '<h3>' + '<a href="/#/parks/'+ marker.get('parkID') +'">' + marker.get('name') + '</a></h3>'+
               '</div>';
 
             var infowindow = new google.maps.InfoWindow({

@@ -1,6 +1,5 @@
-Unleashed.ParkRoute = Ember.Route.extend({
+Unleashed.ParkIndexRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find('park', params['id']);
   }
 });
-

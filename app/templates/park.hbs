@@ -1,16 +1,18 @@
 <div class="park">
-<h1>{{name}}</h1>
+  <h1>{{name}}</h1>
 
-<div class="inner-park">
-  <ul>
-    <li>{{description}}</li>
-    {{rating}}
-    {{#each star in stars}}
-     ★
-    {{/each}}
-    <li><img {{bind-attr src=imgUrl}} /></li>
-  </ul>
-</div>
+  <div class="inner-park">
+    <ul>
+      <li>{{description}}</li>
+      <div class="star-container">
+        {{rating}}
+      {{#each star in stars}}
+       ★
+      {{/each}}
+      </div>
+      <li><img {{bind-attr src=imgUrl}} /></li>
+    </ul>
+  </div>
 
 <button class="btn">{{#link-to 'park.edit' model}}Change{{/link-to}}</button>
 <button {{action "delete"}} class="btn btn-danger">Delete</button>
@@ -22,7 +24,7 @@
     </div>
   {{/if}}
   {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
-
+  {{link-to "See Who's Here" "park.checkin" this.id class='btn btn-primary'}}
 <div class="comment-box">
   <h2>Comments ({{comments.length}})</h2>
     {{#each comments}}
@@ -35,6 +37,16 @@
       </div>
     {{/each}}
   </div>  
+</div>
+<div class="checkin">
+  <h3>See whos here</h3>
+      <ul>
+  {{#each checkins}}
+      <li>{{userName}}
+      {{date}}</li>
+
+  {{/each}}
+      <ul>
 </div>
 
 

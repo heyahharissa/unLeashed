@@ -5,7 +5,7 @@ Unleashed.ParkNewCommentController = Ember.Controller.extend({
 	            if (!this.get('text')) { return; }//Do Nothing if text field is blank;
 	            var comment = this.store.createRecord('comment', {
 	                commenter: this.get('commenter'),
-	                date: (new Date()).toDateString(),
+	                date: (new Date()).toString(),
 	                text: this.get('text')
 	            });
 

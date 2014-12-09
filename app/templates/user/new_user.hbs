@@ -1,0 +1,9 @@
+<div class="new">
+	    <h3 class="panel-title">Become a User</h3>
+	    <form {{action 'createUser' on='submit'}}>
+		    <h1>{{userName}}</h1>
+		      <p>Name: {{input value=userName}}</p>
+		      <p>Avatar: {{input type="text" value=userImgUrl }}</p>
+		    <button class="btn">Create</button>
+		</form>
+</div>

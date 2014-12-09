@@ -1,9 +1,3 @@
-Unleashed.IndexRoute = Ember.Route.extend({
-	model: function () {
-		return this.store.find('park');
-	}
-});
-
 Unleashed.IndexController = Ember.Controller.extend({
 	needs: ['application'],
     name: "You Are Here",
@@ -29,7 +23,9 @@ Unleashed.IndexController = Ember.Controller.extend({
 	 		return Ember.Object.create({
 	 			latitude: lat_long[0],
 	 			longitude: lat_long[1],
-	 			name: park.get('name')
+	 			name: park.get('name'),
+	 			center: lat_long[0,1],
+	 			parkID: park.get('id')
 	 		});
 		})
 		console.log(parks)
