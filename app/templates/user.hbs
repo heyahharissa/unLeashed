@@ -1,6 +1,7 @@
 <div class="testing">
-	<h1>{{userName}}</h1>
 		<img {{bind-attr src=userImgUrl}} class="user-page"/>
+		<h1>{{userName}}</h1>
+		<p>{{breed}}</p>
 		{{#link-to 'user.edit_user' model}}Change{{/link-to}}
 </div>
 {{outlet}}

@@ -118,6 +118,10 @@ span {
 		color: white;
 	}
 
+	.btn {
+		background-color: #7AB317;
+	}
+
 }
 
 hr {
@@ -166,7 +170,7 @@ hr {
 }
 
 .locator {
-	display: none;
+	//display: none;
 }
 
 .comment {
@@ -198,9 +202,17 @@ hr {
 	h1{
 		padding: 0 1em;
 	}
+	li {
+		list-style-type: none;
+	}
+	img {
+		max-height: 100px;
+		max-width: 100px;
+	}
 }
 
 img.user-page {
+	border: 10px solid white;
 	max-height: 250px;
 	max-width: 300px;
 }

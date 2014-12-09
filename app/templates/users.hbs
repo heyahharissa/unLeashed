@@ -5,6 +5,7 @@
 	 {{#each}}
 	 <li>{{#link-to 'user' this}}
 	 	{{userName}}
+	 	<img {{bind-attr src=userImgUrl}} />
 	 {{/link-to}}</li>
 	  {{/each}}
 	</ul>

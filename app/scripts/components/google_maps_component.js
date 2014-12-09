@@ -18,13 +18,27 @@ Unleashed.GoogleMapsComponent = Ember.Component.extend({
     }.observes('markers'),
 
     generatePin: function() {
-    	var marker = this.get('markers')[0];
+    	var markers = this.get('markers');
     	var map = this.get('map');
-    	var coords = new google.maps.LatLng(marker.get('latitude'), marker.get('longitude'));
-    	var marker = new google.maps.Marker({
-    		position: coords,
-    		map: map
-    	});
+        markers.forEach(function (marker) {
+            var coords = new google.maps.LatLng(marker.get('latitude'), marker.get('longitude'));
+            var contentString = '<div id="content">'+
+              '<h3>' + marker.get('name') + '</h3>'+
+              '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+            var marker = new google.maps.Marker({
+                position: coords,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: marker.get('name')
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.open(map, marker);
+            });
+        });
     }
 
 });

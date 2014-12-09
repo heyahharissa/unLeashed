@@ -1,5 +1,12 @@
+Unleashed.IndexRoute = Ember.Route.extend({
+	model: function () {
+		return this.store.find('park');
+	}
+});
+
 Unleashed.IndexController = Ember.Controller.extend({
 	needs: ['application'],
+    name: "You Are Here",
 
 	latitude: function () {
 		var userLocation = this.get('controllers.application').userLocation;
@@ -17,7 +24,16 @@ Unleashed.IndexController = Ember.Controller.extend({
 	}.property('controllers.application.userLocation'),
 
 	markers: function () {
-		return [Ember.Object.create(this.getProperties('latitude','longitude'))]
+	 	var parks = this.get('model').map(function (park) {
+	 		var lat_long = park.get('location').split(',');
+	 		return Ember.Object.create({
+	 			latitude: lat_long[0],
+	 			longitude: lat_long[1],
+	 			name: park.get('name')
+	 		});
+		})
+		console.log(parks)
+		return [Ember.Object.create(this.getProperties('latitude','longitude', 'name'))].concat(parks);
 	}.property('latitude', 'longitude')
 
 });
