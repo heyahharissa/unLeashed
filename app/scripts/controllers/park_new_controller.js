@@ -1,5 +1,4 @@
-Unleashed.NewController = Ember.Controller.extend({	
-	
+Unleashed.ParksNewParkController = Ember.ArrayController.extend({		
 	actions: {
     	create : function(){
       	var parkAttrs = this.getProperties('name', 'imgUrl','description','location','rating');
