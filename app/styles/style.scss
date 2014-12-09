@@ -80,7 +80,22 @@ span {
 	}
 
 }
-
+.edit-park {
+		background-color: #394F66;
+	//background-color: rgba(255,255,255,.95);
+	display:inline-block;
+	float: left;
+	padding: 1em;
+	-webkit-border-radius: 6px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius: 6px;
+	-moz-border-radius-topleft: 0;
+	border-radius: 6px;
+	border-top-left-radius: 0;
+	li {
+		list-style-type: none;
+	}
+}
 .parks {
 	color: white;
 	background-color: #777;

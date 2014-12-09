@@ -4,7 +4,7 @@ Unleashed.ParkEditController = Ember.ObjectController.extend({
   actions: {
     editPark: function () {
       this.get('model').save();
-      this.transitionToRoute('index');
+      this.transitionToRoute('parks');
     }
   }
 });

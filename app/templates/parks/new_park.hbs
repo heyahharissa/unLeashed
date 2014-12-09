@@ -7,15 +7,15 @@
 	      <p>Description: {{input value=description}}</p>
 	      	<fieldset class="rating">
 			    <legend>Rate this park:</legend>
-			    <input type="radio" id="star5" name="rating" value="5" />
+			    <input type="radio" id="star5" {{action "setRating" 5 on=click}} name="rating" value="5" />
 			    <label for="star5"></label>
-			    <input type="radio" id="star4" name="rating" value="4" />
+			    <input type="radio" id="star4" {{action "setRating" 4 on=click}} name="rating" value="4" />
 			    <label for="star4"></label>
-			    <input type="radio" id="star3" name="rating" value="3" />
+			    <input type="radio" id="star3" {{action "setRating" 3 on=click}} name="rating" value="3" />
 			    <label for="star3"></label>
-			    <input type="radio" id="star2" name="rating" value="2" />
+			    <input type="radio" id="star2" {{action "setRating" 2 on=click}} name="rating" value="2" />
 			    <label for="star2"></label>
-			    <input type="radio" id="star1" name="rating" value="1" />
+			    <input type="radio" id="star1" {{action "setRating" 1 on=click}} name="rating" value="1" />
 			    <label for="star1"></label>
 			</fieldset>
 	    <button class="btn">Create</button>

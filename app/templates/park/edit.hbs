@@ -1,10 +1,23 @@
-<div class="park">
+<div class="edit-park">
   <h1>{{name}}</h1>
     <div class="inner-park">
       <form {{action 'editPark'  on='submit'}}>
           <p>Name: {{input value=name}}</p>
           <p>Picture: {{input type='text' value=imgUrl id='imgUrl' }}</p>
           <p>Description: {{input value=description}}</p>
+          <p><fieldset class="rating">
+			    <legend>Rate this park:</legend>
+			    <input type="radio" id="star5" {{action "setRating" 5 on=click}} name="rating" value="5" />
+			    <label for="star5"></label>
+			    <input type="radio" id="star4" {{action "setRating" 4 on=click}} name="rating" value="4" />
+			    <label for="star4"></label>
+			    <input type="radio" id="star3" {{action "setRating" 3 on=click}} name="rating" value="3" />
+			    <label for="star3"></label>
+			    <input type="radio" id="star2" {{action "setRating" 2 on=click}} name="rating" value="2" />
+			    <label for="star2"></label>
+			    <input type="radio" id="star1" {{action "setRating" 1 on=click}} name="rating" value="1" />
+			    <label for="star1"></label>
+			</fieldset></p>
         <button>Update</button>
       </form>
     </div>
