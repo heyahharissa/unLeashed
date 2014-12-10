@@ -40,11 +40,6 @@ Unleashed.ParkController = Ember.ObjectController.extend({
     // the edit method remains the same
     edit: function(){
       this.transitionToRoute('park.edit');
-    },
-    deleteComment: function(){
-       this.get('model.comment').deleteRecord();
-       this.get('model.comment').save();
-       this.transitionToRoute('parks');
     }
   }
 });

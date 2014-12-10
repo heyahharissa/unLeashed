@@ -1,18 +1,14 @@
-<div class="parks list-group">
-<h1>Parks ({{parksCount}})</h1>
-		<hr>
-	<ul>
-	 {{#each}}
-	 	<li>
-	 		{{#link-to 'park' this}}
-	 			{{this.name}}
-	 		{{/link-to}}
-		 	{{this.description}}
-	 		<hr>
- 		</li>
-	 {{/each}}
-	</ul>
+<div class="parks list-group wrapper">
+	<h1>Parks ({{parksCount}})</h1>
 	<button class="btn new-class">{{#link-to "parks.new_park"}}<span class="glyphicon glyphicon-plus"></span>New{{/link-to}}</button>
+	  <hr>
+		 {{#each}}
+		 	<div class="park-card">
+		 		<p>{{#link-to 'park' this }}{{name}}{{/link-to}}
+			 	{{this.description}}</p>
+				<img {{bind-attr src=imgUrl}} />
+				 </div>
+		 {{/each}}
 </div>	
 
 

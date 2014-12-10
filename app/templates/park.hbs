@@ -24,7 +24,7 @@
     </div>
   {{/if}}
   {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
-  {{link-to "See Who's Here" "park.checkin" this.id class='btn btn-primary'}}
+  {{link-to "Check In To This Park" "park.checkin" this.id class='btn btn-primary'}}
 <div class="comment-box">
   <h2>Comments ({{comments.length}})</h2>
     {{#each comments}}
@@ -33,7 +33,6 @@
           <p>{{commenter}}</p>
           <p>said:</p>  
           <p>{{text}}</p>
-        <button {{action "deleteComment"}}  class="btn btn-danger">Delete</button>
       </div>
     {{/each}}
   </div>  

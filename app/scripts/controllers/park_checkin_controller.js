@@ -4,7 +4,7 @@ Unleashed.ParkCheckinController = Ember.Controller.extend({
 	        checkIn: function () {
 	            var checkin = this.store.createRecord('checkin', {
 	                userName: this.get('userName'),
-	                date: (new Date()).toDateString(),
+	                date: new Date(),
 	            });
 
 	            checkin.save();

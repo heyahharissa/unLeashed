@@ -9,7 +9,7 @@ Unleashed.ParksNewParkController = Ember.ArrayController.extend({
 
 
 	actions: {
-    	create : function(){
+    	createPark : function(){
 	      	var parkAttrs = this.getProperties('name', 'imgUrl','description','location','rating');
 	      	var newPark = this.store.createRecord('park', parkAttrs);
 	      	newPark.save();

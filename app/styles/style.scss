@@ -3,15 +3,15 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 
 /* Put your CSS here */
 body {
-	background: url('http://www.nolibsvet.com/wp-content/uploads/2014/03/dog-park.jpg') no-repeat center center fixed;
-	 -webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+	// background: url('http://www.nolibsvet.com/wp-content/uploads/2014/03/dog-park.jpg') no-repeat center center fixed;
+	//  -webkit-background-size: cover;
+ //  	-moz-background-size: cover;
+ //  	-o-background-size: cover;
+ //  	background-size: cover;
 }
 
 nav.main {
-	background-color: #fff;
+	background-color: #4E4D4A;
 }
 
 .local {
@@ -19,17 +19,33 @@ nav.main {
 }
 
 .links {
-	margin: 0 10%;
+	margin: 0 8%;
+	padding: .25em;
 }
 
 .map-canvas {
-  width: 800px;
-  height: 600px;
+	margin: 0;
+ 	width: 100%;
+ 	height: 300px;
 }
 
 h1 {
 	padding: 0;
 	margin: 0;
+}
+
+a {
+	color: white;
+	&:hover {
+		color: white;
+	}
+}
+
+main a {
+	color: #333;
+		&:hover {
+		color: #555;
+	}
 }
 
 .c100 {
@@ -52,8 +68,33 @@ h1 {
 	width: 50%;
 }
 
-.container {
-	margin: 1% auto;
+.wrapper {
+	margin: 0 12%;
+}
+
+.header-text {
+	background-color:rgba(39, 144, 176, 1);
+	color: white;
+	p{
+		font-size: 2.25em;
+		margin: 0 10%;
+		padding: 1em 0;
+	}
+}
+
+.body-copy {
+	background-color: #94BA65;
+	p{
+		font-size: 1em;
+		margin: 0 10%;
+		padding: 1.5em 0;
+	
+	}
+
+}
+
+.gmnoprint {
+	margin: 5px;
 }
 
 span {
@@ -85,6 +126,7 @@ span {
 	color: white;
 	display:inline-block;
 	float: left;
+	margin: 0 9%;
 	padding: 1em;
 	-webkit-border-bottom-right-radius: 6px;
 	-webkit-border-bottom-left-radius: 6px;
@@ -163,10 +205,7 @@ span {
 .parks {
 	color: white;
 	background-color: #777;
-	display: inline-block;
-	float: left;
 	padding: 1em;
-	width: 25%;
 	h1 {
 		color: white;
 	}
@@ -185,7 +224,21 @@ span {
 	.btn {
 		background-color: #7AB317;
 	}
-
+	
+	.new-class {
+		float: right;
+	}
+	img {
+		max-width: 300px;
+		max-height: auto;
+	}
+	
+	.park-card {
+		display: inline-block;
+		width: 45%;
+		padding: 1em;
+		margin: .25em;
+	}
 }
 
 hr {
@@ -342,6 +395,28 @@ legend {
 }
 //end stars
 @media screen and (max-width: 40em){
+
+	.navbar-brand {
+		float: none; 
+		padding: 0; 
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.links {
+		margin: 0;
+		padding: 1.75em;
+	}
+
+	nav.main { 
+		height: 3%;
+	}
+
+	.header-text {
+		p{
+			font-size: 1em;
+		}
+	}
 
 	.c30 {
 		float: left;

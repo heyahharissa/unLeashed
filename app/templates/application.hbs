@@ -1,21 +1,15 @@
 <nav class="main">
     <div class="links">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
         {{#link-to "index" classNames="navbar-brand"}}Unleashed{{/link-to}}
         <ul class="nav-right">
             <li>{{#link-to "parks"}}<span class="glyphicon glyphicon-tree-deciduous"></span>Parks{{/link-to}}</li>
-            <li>{{#link-to "users"}}<span class="glyphicon glyphicon-user"></span>Users{{/link-to}}</li>
+            <li>{{#link-to "users"}}<span class="glyphicon glyphicon-user"></span>Friends{{/link-to}}</li>
         </ul>
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
     </div>
 </nav>
-<div class="container" id="main">
+<div id="main">
     <div class="row">
         {{outlet}}
     </div>

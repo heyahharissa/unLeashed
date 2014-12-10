@@ -1,15 +1,19 @@
-<div class="users">
-	<h1>users</h1>
+<div class="users wrapper">
+	<h1>Friends</h1>
 	
 	<ul>
 	 {{#each}}
 	 <li>{{#link-to 'user' this}}
-	 	{{userName}}
 	 	<img {{bind-attr src=userImgUrl}} />
+	 	{{userName}}
 	 {{/link-to}}</li>
 	  {{/each}}
 	</ul>
-
+    <h3>Not on this list?</h3>
+	<button class="btn">
+		{{#link-to "new_user"}}<span class="glyphicon glyphicon-plus"></span>Make a Profile{{/link-to}}
+	</button>
 </div>
+
 
 {{outlet}}

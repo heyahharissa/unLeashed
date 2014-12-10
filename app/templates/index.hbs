@@ -1,10 +1,14 @@
 <main>
-    {{#if latitude}}
-    	{{google-maps latitude=latitude longitude=longitude markers=markers}}
-    {{/if}}
-    <div class="testing">
-	    <h3>Do you want to Create a Profile?</h3>
-	    	<button class="btn">{{#link-to "new_user"}}<span class="glyphicon glyphicon-plus"></span>Make a Profile{{/link-to}}</button>
+	<div class="header-text">
+    	<p>Find Dog Parks near you</p>
+    </div>
+		{{#if latitude}}
+	    	{{google-maps latitude=latitude longitude=longitude markers=markers}}
+	    {{/if}}
+    <div class="body-copy">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, eius, dolores. Consequatur, cum molestias, ullam expedita, illum debitis distinctio, voluptatem doloribus repudiandae dignissimos eveniet praesentium ipsam repellendus tempore. Distinctio, dolorum!</p>
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quas atque eveniet consectetur corrupti mollitia deleniti. Soluta quam nulla, velit eligendi sunt labore perferendis voluptatibus, fuga quis iste nostrum eveniet!</p>
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio reprehenderit, fugiat tenetur alias provident incidunt, sint eius quisquam tempore iure dolores voluptates libero accusantium numquam, ipsam quidem dicta in. Blanditiis.</p>
     </div>
 </main>
 
