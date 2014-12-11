@@ -1,11 +1,11 @@
-<div class="users wrapper">
+<div class="users">
 	<h1>Friends</h1>
 	
 	<ul>
 	 {{#each}}
 	 <li>{{#link-to 'user' this}}
 	 	<img {{bind-attr src=userImgUrl}} />
-	 	{{userName}}
+	 	<p>{{userName}}</p>
 	 {{/link-to}}</li>
 	  {{/each}}
 	</ul>

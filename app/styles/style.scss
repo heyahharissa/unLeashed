@@ -344,18 +344,33 @@ hr {
 
 .users {
 	background-color: #ffffff;
-	border-radius: 6px;
 	color: #333;
+	margin: 0 10%;
 	padding: 1em;
 	h1{
 		padding: 0 1em;
 	}
+
+	ul{
+		padding: 0 1em;
+		margin: 0 1%;
+	}
+
 	li {
+		display: inline-block;
 		list-style-type: none;
+		padding: .25em;
 	}
 	img {
-		max-height: 100px;
-		max-width: 100px;
+		max-height: 15em;
+		max-width: 100%;
+	}
+	p{
+		color: #777;
+	}
+
+	.btn {
+		background-color: green;
 	}
 }
 
