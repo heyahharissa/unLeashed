@@ -163,6 +163,7 @@ span {
 	-moz-border-radius-bottomleft: 6px;
 	border-bottom-right-radius: 6px;
 	border-bottom-left-radius: 6px;
+	width: 50%;
 
 	li {
 		list-style-type: none;
@@ -177,7 +178,7 @@ span {
 
 		img {
 			height: auto;
-			max-width: 650px;
+			max-width: 550px;
 		}
 	}
 
@@ -206,6 +207,7 @@ span {
 		border-radius: 6px;
 		border-top-left-radius: 0;
 		float: left;
+		height: 450px;
 		padding: 1em;
 		width: 47%;
 
