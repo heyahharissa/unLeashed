@@ -1,6 +1,6 @@
 <div class="park">
   <h1>{{name}}</h1>
-
+  {{link-to "Check In To This Park" "park.checkin" this.id class='btn btn-success chkin'}}
   <div class="inner-park">
     <ul>
       <li>{{description}}</li>
@@ -24,7 +24,6 @@
     </div>
   {{/if}}
   {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
-  {{link-to "Check In To This Park" "park.checkin" this.id class='btn btn-primary'}}
 <div class="comment-box">
   <h3>Comments</h3>
     {{#each comments}}
