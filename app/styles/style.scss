@@ -3,6 +3,8 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 
 /* Put your CSS here */
 body {
+	background-color: #777;
+	font-family: 'Bitter', serif;
 	// background: url('http://www.nolibsvet.com/wp-content/uploads/2014/03/dog-park.jpg') no-repeat center center fixed;
 	//  -webkit-background-size: cover;
  //  	-moz-background-size: cover;
@@ -19,8 +21,14 @@ nav.main {
 }
 
 .links {
+	font-family: 'Lato', sans-serif;
 	margin: 0 8%;
 	padding: .25em;
+}
+
+.logo {
+	font-size: 2em;
+	color: white;
 }
 
 .map-canvas {
@@ -83,8 +91,20 @@ main a {
 }
 
 .body-copy {
-	background-color: #94BA65;
-	p{
+	background-color: #4E4D4A;
+
+	h2 {
+		color:#94BA65;
+		margin: 0 10%;
+		padding: .75em 0;
+	}
+	h3 {
+		color: #FB7E00;
+		margin: 0 10%;
+		padding: .75em 0;
+	}
+	p{	
+		color:rgba(234,238,220, .8);
 		font-size: 1em;
 		margin: 0 10%;
 		padding: 1.5em 0;
@@ -108,9 +128,19 @@ span {
 		display: inline-block;
 		padding: 0 .25em;
 	}
+		a{
+		background-color: grey;
+		padding: .65em;
+		border-radius: 3px;
+	}
+
+	a:hover {
+		background-color: #555;
+		border: 1px solid white;
+	}
 }
 
-.parks, .new {
+.new {
 	background-color: #E0E0E0;
 	-webkit-border-top-left-radius: 6px;
 	-webkit-border-bottom-left-radius: 6px;
@@ -126,8 +156,7 @@ span {
 	color: white;
 	display:inline-block;
 	float: left;
-	margin: 0 9%;
-	padding: 1em;
+	padding: 2.5% 5%;
 	-webkit-border-bottom-right-radius: 6px;
 	-webkit-border-bottom-left-radius: 6px;
 	-moz-border-radius-bottomright: 6px;
@@ -178,12 +207,28 @@ span {
 		border-top-left-radius: 0;
 		float: left;
 		padding: 1em;
+		width: 47%;
 
 		h3{
 			color: #555;
 			margin: 0;
 			padding: 0;
 		} 
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style-type: none;
+		}
+
+		.name {
+			font-size: 1.25em;
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 .edit-park {
@@ -203,7 +248,7 @@ span {
 	}
 }
 .parks {
-	color: white;
+	color: #777;
 	background-color: #777;
 	padding: 1em;
 	h1 {
@@ -218,28 +263,28 @@ span {
 		font-size: 1.5em;
 	}
 	a {
-		color: white;
-	}
-
-	.btn {
-		background-color: #7AB317;
+		color: #333;
+		font-size: 1.5em;
 	}
 	
-	.new-class {
-		float: right;
-	}
 	img {
 		max-width: 300px;
 		max-height: auto;
 	}
 	
 	.park-card {
-		display: inline-block;
+		display: block;
+		float: left;
 		width: 45%;
 		padding: 1em;
 		margin: .25em;
 	}
 }
+
+.new-class {
+		background-color: #7AB317;
+		float: left;
+	}	
 
 hr {
 	margin-top: 20px;
@@ -254,6 +299,7 @@ hr {
 	border-radius: 6px;
 	float: left;
 	padding: 1em;
+	margin: 0 10%;
 	h1 {
 		padding: 1em 0;
 	}
@@ -268,6 +314,7 @@ hr {
 .new-user {
 	background-color: #E0E0E0;
 	border-radius: 6px;
+	margin: 0 10%;
 	padding: 1em;
 	h1 {
 		padding: 1em 0;
