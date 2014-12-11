@@ -2,8 +2,8 @@
 		 {{#each}}
 		 	<div class="park-card">
 		 		<p>{{#link-to 'park' this }}{{name}}{{/link-to}}</p>
-			 	{{this.description}}</p>
-				<p><img {{bind-attr src=imgUrl}} /></p>
+			 	<p>{{this.description}}</p>
+				<p>{{#link-to 'park' this }}<img {{bind-attr src=imgUrl}} />{{/link-to}}</p>
 			</div>
 		 {{/each}}
 </div>	
