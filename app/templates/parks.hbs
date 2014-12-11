@@ -1,14 +1,13 @@
-<button class="btn new-class">{{#link-to "parks.new_park"}}<span class="glyphicon glyphicon-plus"></span>New{{/link-to}}</button>
-<div class="parks list-group wrapper testing">
+<div class="parks list-group">
 		 {{#each}}
 		 	<div class="park-card">
-		 		<p>{{#link-to 'park' this }}{{name}}{{/link-to}}
+		 		<p>{{#link-to 'park' this }}{{name}}{{/link-to}}</p>
 			 	{{this.description}}</p>
-				<img {{bind-attr src=imgUrl}} />
+				<p><img {{bind-attr src=imgUrl}} /></p>
 			</div>
 		 {{/each}}
 </div>	
-
+		 <button class="btn new-class">{{#link-to "parks.new_park"}}<span class="glyphicon glyphicon-plus"></span>New{{/link-to}}</button>
 
 {{outlet}}
 

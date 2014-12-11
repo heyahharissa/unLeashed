@@ -29,6 +29,9 @@ nav.main {
 .logo {
 	font-size: 2em;
 	color: white;
+	a:hover{
+		color:rgba(39, 144, 176, 1)
+	}
 }
 
 .map-canvas {
@@ -255,7 +258,11 @@ span {
 }
 .parks {
 	color: #777;
-	background-color: #777;
+	padding: 1em;
+	background-color: #E0E0E0;
+	background-color: #E0E0E0;
+	float: left;
+	margin: 0 10%;
 	padding: 1em;
 	h1 {
 		color: white;
@@ -461,7 +468,14 @@ legend {
 	border-bottom: none;
 	margin-bottom: 0px;
 }
+
+footer {
+	margin: 0 auto;
+	padding: .5em 1em 0 1em;
+	width: 20%;
+}
 //end stars
+
 @media screen and (max-width: 40em){
 
 	.navbar-brand {
