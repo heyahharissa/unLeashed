@@ -5,7 +5,9 @@
 		<div class="c70">
 			<h1>{{userName}}</h1>
 			<p>Breed: {{breed}}</p>
+			<p>Interests: Chasing Squirrels</p>
+			<p>Favorite Park: Walsingham</p>
+			{{#link-to 'user.edit_user' model}}Change{{/link-to}}
 		</div>
-		{{#link-to 'user.edit_user' model}}Change{{/link-to}}
 </div>
 {{outlet}}
