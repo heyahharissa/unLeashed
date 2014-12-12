@@ -24,6 +24,18 @@ nav.main {
 	font-family: 'Lato', sans-serif;
 	margin: 0 9% 0 8%;
 	padding: .25em;
+	a{
+		&:hover {
+		color: white;
+		}
+		&:visited {
+			color: white;
+		}
+		&:active {
+			color: white;
+		}
+
+	}
 }
 
 .logo {
@@ -33,6 +45,10 @@ nav.main {
 		color:rgba(39, 144, 176, 1);
 		text-shadow: #ffffff 1px 1px, #ffffff 2px 2px;
 	}
+}
+
+.white-bg {
+	background-color: white;
 }
 
 .map-canvas {
@@ -122,7 +138,9 @@ main a {
 }
 
 .chkin {
-	float: right;
+	position: relative;
+	top: -27px;
+	left: 600px;
 }
 
 span {
@@ -178,7 +196,9 @@ span {
 	}
 
 	.inner-park {
-		padding: 1em 0;
+		padding: 0 0 1em 0;
+		top: -20px;
+		position: relative;
 		ul {
 			margin: 0 auto;
 			padding: 0;
@@ -186,13 +206,12 @@ span {
 
 		img {
 			height: auto;
-			max-width: 550px;
+			max-width: 765px;
 		}
 	}
 
 	.star-container {
 		color: gold;
-		float: right;
 	}
 
 	.comment {

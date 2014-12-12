@@ -1,51 +1,51 @@
-<div class="park">
-  <h1>{{name}}</h1>
-  {{link-to "Check In To This Park" "park.checkin" this.id class='btn btn-success chkin'}}
-  <div class="inner-park">
-    <ul>
-      <li>{{description}}</li>
-      <div class="star-container">
-        {{rating}}
-      {{#each star in stars}}
-       ★
-      {{/each}}
-      </div>
-      <li><img {{bind-attr src=imgUrl}} /></li>
-    </ul>
-  </div>
-
-<button class="btn">{{#link-to 'park.edit' model}}Change{{/link-to}}</button>
-<button {{action "delete"}} class="btn btn-danger">Delete</button>
-  {{#if deleteMode}}
-    <div class="confirm-box">
-      <h4>Really?</h4>
-        <button {{action "confirmDelete"}} class="btn"> yes </button>
-        <button {{action "cancelDelete"}} class="btn"> no </button>
+  <div class="park">
+    <h1>{{name}}</h1>
+    {{link-to "Check In To This Park" "park.checkin" this.id class='btn btn-success chkin'}}
+    <div class="inner-park">
+      <ul>
+        <li>{{description}}</li>
+        <div class="star-container">
+          {{rating}}
+        {{#each star in stars}}
+         ★
+        {{/each}}
+        </div>
+        <li><img {{bind-attr src=imgUrl}} /></li>
+      </ul>
     </div>
-  {{/if}}
-  {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
-<div class="comment-box">
-  <h3>Comments</h3>
-    {{#each comments}}
-      <div class="comment">
-        <img {{bind-attr src=userImgUrl}} /> 
-          <p>{{commenter}}</p>
-          <p>said:</p>  
-          <p>{{text}}</p>
-      </div>
-    {{/each}}
-  </div>  
-</div>
-<div class="checkin">
-  <h3>See whos here</h3>
-      <ul>
-  {{#each checkins}}
-      <li><p class="name">{{userName}}</p>
-      {{date}}</li>
 
-  {{/each}}
-      <ul>
-</div>
+  <button class="btn">{{#link-to 'park.edit' model}}Change{{/link-to}}</button>
+  <button {{action "delete"}} class="btn btn-danger">Delete</button>
+    {{#if deleteMode}}
+      <div class="confirm-box">
+        <h4>Really?</h4>
+          <button {{action "confirmDelete"}} class="btn"> yes </button>
+          <button {{action "cancelDelete"}} class="btn"> no </button>
+      </div>
+    {{/if}}
+    {{link-to "New Comment" "park.new_comment" this.id class='btn btn-primary'}}
+  <div class="comment-box">
+    <h3>Comments</h3>
+      {{#each comments}}
+        <div class="comment">
+          <img {{bind-attr src=userImgUrl}} /> 
+            <p>{{commenter}}</p>
+            <p>said:</p>  
+            <p>{{text}}</p>
+        </div>
+      {{/each}}
+    </div>  
+  </div>
+  <div class="checkin">
+    <h3>See whos here</h3>
+        <ul>
+    {{#each checkins}}
+        <li><p class="name">{{userName}}</p>
+        {{date}}</li>
+
+    {{/each}}
+        <ul>
+  </div>
 
 
 {{outlet}}
